@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.androidlearning2">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Donsll"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidLearning2">
+        <activity
+            android:name=".MaterialDesign.Fruit.FruitActivity"
+            android:theme="@style/FruitActivityTheme" />
+        <activity android:name=".MaterialDesign.DrawerLayout.DrawerLayoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MaterialDesign.Toolbar.ToolbarActivity" />
+        <activity android:name=".Service.DownloadActivity" />
+
+        <service
+            android:name=".Service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.MyIntentService"
+            tools:ignore="Instantiatable" />
+
+        <activity android:name=".AndroidThread.AndroidThreadActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
